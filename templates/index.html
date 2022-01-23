@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Counter</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    </head>
+    <body>
+        <div class="container main">
+            <h1>Counter</h1>
+            <h2>{{ text }}</h2>
+            <div class="container-fluid flex">
+                <form action="/count" method="post">
+                    <button type="submit" class="btn btn-success">+{{ inc }} visits</button>
+                </form>
+                <form action="/destroy_session" method="post">
+                    <button type="submit" class="btn btn-danger">Reset</button>                
+                </form>
+            </div>
+        </div>
+        <div class="container aside">
+            <h6>Visits increment setting:</h6>
+            <div class="container-fluid flex">
+                <form action="/minus_one" method="post">
+                    <button type="submit" class="btn btn-danger">-</button>
+                </form>
+                <span>{{ inc }}</span>
+                <form action="/plus_one" method="post">
+                    <button type="submit" class="btn btn-success">+</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

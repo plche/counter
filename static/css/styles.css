@@ -1,0 +1,39 @@
+.container.main {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.container-fluid.flex {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-fluid.flex > form {
+    margin: 0 10px;
+}
+
+.container.aside {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-right: 150px;
+}
+
+.container.aside > h6 {
+    display: inline-block;
+    width: 350px;
+    margin: auto 0;
+}
+
+.container.aside > div.container-fluid.flex {
+    margin: auto 0;
+    padding: 0;
+    justify-content: flex-start;
+}
+
+.container.aside > div.container-fluid.flex > span {
+    margin: auto 0;
+}
