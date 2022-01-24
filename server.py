@@ -1,6 +1,3 @@
-from cgitb import text
-from crypt import methods
-from pickle import GET
 from flask import Flask, render_template, request, redirect, session
 
 app = Flask(__name__)
